@@ -7527,7 +7527,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>2-23-26 Update</p>
+<p>2-24-26 Update</p>
 </div>
 </div>
 </div>
@@ -8316,7 +8316,7 @@ bash trimgalore.sh Undetermined_S0
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-bash"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/data/gallegosda/GEO/WGBS/260220_WGBS_DG/raw_data/fastq260220/bismark/WGBS_Feb2026
@@ -8876,7 +8876,516 @@ align_bismark<span class="w"> </span><span class="se">\</span>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4917452b-f2a3-4287-9772-93c7f27a4a16">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=43c57e04-c231-4421-a2e2-bfb49cc4b4e6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Trying-a-more-step-wise-way">Trying a more step-wise way<a class="anchor-link" href="#Trying-a-more-step-wise-way">¶</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=12b74652-d44c-46bc-9974-378ead7cb2d2">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7357c5a8-f45c-4207-9997-0a0138d6d1c6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Samples to process with Deduplication:</p>
+<ol>
+<li>DG3_R1_Input_BSconv_S3_R1_001.fastq.gz</li>
+<li>DG3_R1_Input_BSconv_S3_R2_001.fastq.gz</li>
+<li>DG4_MEF_Input_BSconv_S4_R1_001.fastq.gz</li>
+<li>DG4_MEF_Input_BSconv_S4_R2_001.fastq.gz</li>
+<li>DG5_E8_3_aa_BSconv_S5_R1_001.fastq.gz</li>
+<li>DG5_E8_3_aa_BSconv_S5_R2_001.fastq.gz</li>
+<li>DG6_E8_5_WT_BSconv_S6_R1_001.fastq.gz</li>
+<li>DG6_E8_5_WT_BSconv_S6_R2_001.fastq.gz</li>
+<li>DG7_E8_7_WT_BSconv_S7_R1_001.fastq.gz</li>
+<li>DG7_E8_7_WT_BSconv_S7_R2_001.fastq.gz</li>
+<li>DG8_E8_8_aa_BSconv_S8_R1_001.fastq.gz</li>
+<li>DG8_E8_8_aa_BSconv_S8_R2_001.fastq.gz</li>
+</ol>
+<p>Samples that will not be processed with Deduplication:</p>
+<ol>
+<li>DG1_R1_777_ChIP_BSconv_S1_R1_001.fastq.gz</li>
+<li>DG1_R1_777_ChIP_BSconv_S1_R2_001.fastq.gz</li>
+<li>DG2_MEF_777_ChIP_BSconv_S2_R1_001.fastq.gz</li>
+<li>DG2_MEF_777_ChIP_BSconv_S2_R2_001.fastq.gz</li>
+</ol>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5849fdc1-95bb-40e4-bc2e-0332e1ac32b3">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>cat<span class="w"> </span>&gt;<span class="w"> </span>DG3_R1_Input_BSconv_S3_TESTSWARM.swarm<span class="w"> </span><span class="s">&lt;&lt; 'EOF'</span>
+<span class="s">bash DG3_R1_Input_BSconv_S3_TESTSH.sh DG3_R1_Input_BSconv_S3</span>
+<span class="s">EOF</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b5530807-62a8-47c9-8016-d645c140a182">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=bismark_align</span>
+<span class="c1">#SBATCH --cpus-per-task=16</span>
+<span class="c1">#SBATCH --mem=64G</span>
+<span class="c1">#SBATCH --time=48:00:00</span>
+<span class="c1">#SBATCH --mail-type=BEGIN,END,FAIL</span>
+<span class="c1">#SBATCH --mail-user=gallegosda@nih.gov</span>
+
+<span class="c1"># Bismark Alignment Script for Biowulf</span>
+<span class="c1"># Adapted for paired-end bisulfite sequencing data</span>
+
+<span class="nb">set</span><span class="w"> </span>-e<span class="w">  </span><span class="c1"># Exit on error</span>
+<span class="nb">set</span><span class="w"> </span>-u<span class="w">  </span><span class="c1"># Exit on undefined variable</span>
+
+module<span class="w"> </span>load<span class="w"> </span>bismark
+module<span class="w"> </span>load<span class="w"> </span>bowtie2
+
+bismark<span class="w"> </span>--bowtie2<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--genome<span class="w"> </span>/data/gallegosda/genomes/GRCm38<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-1<span class="w"> </span><span class="nv">$1</span>_R1_001.fastq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-2<span class="w"> </span><span class="nv">$1</span>_R2_001.fastq.gz<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--directional<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--parallel<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output_dir<span class="w"> </span>/data/gallegosda/GEO/WGBS/260220_WGBS_DG/raw_data/fastq260220/bismark/WGBS_Feb2026/bismark_output_TEST<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--nucleotide_coverage
+EOF
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=3a38f787-9b53-4987-8432-1cb612897f1a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>Commonly<span class="w"> </span>Used<span class="w"> </span>Options
+
+--parallel<span class="w"> </span>&lt;int&gt;<span class="w"> </span>-<span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>parallel<span class="w"> </span>instances<span class="w"> </span><span class="o">(</span>speeds<span class="w"> </span>up<span class="w"> </span>alignment<span class="o">)</span>
+--multicore<span class="w"> </span>&lt;int&gt;<span class="w"> </span>-<span class="w"> </span>Multithreading<span class="w"> </span><span class="k">for</span><span class="w"> </span>each<span class="w"> </span>instance
+--output_dir<span class="w"> </span>&lt;dir&gt;<span class="w"> </span>-<span class="w"> </span>Specify<span class="w"> </span>output<span class="w"> </span>directory
+--temp_dir<span class="w"> </span>&lt;dir&gt;<span class="w"> </span>-<span class="w"> </span>Temporary<span class="w"> </span>directory<span class="w"> </span><span class="k">for</span><span class="w"> </span>sorting
+--bowtie2<span class="w"> </span>-<span class="w"> </span>Use<span class="w"> </span>Bowtie2<span class="w"> </span>instead<span class="w"> </span>of<span class="w"> </span>Bowtie<span class="w"> </span><span class="o">(</span>default,<span class="w"> </span>recommended<span class="o">)</span>
+--non_directional<span class="w"> </span>-<span class="w"> </span>For<span class="w"> </span>non-directional<span class="w"> </span>libraries
+--pbat<span class="w"> </span>-<span class="w"> </span>For<span class="w"> </span>PBAT<span class="w"> </span>libraries
+--nucleotide_coverage<span class="w"> </span>-<span class="w"> </span>Generate<span class="w"> </span>cytosine<span class="w"> </span>coverage<span class="w"> </span>files
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=27ff8c69-58e0-42b7-aa5f-7c9a052faa5b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>cat<span class="w"> </span>&gt;<span class="w"> </span>DG3_R1_Input_BSconv_S3_TESTSH.sh<span class="w"> </span><span class="s">&lt;&lt; 'EOF'</span>
+<span class="s">#!/bin/bash</span>
+<span class="s"># Bismark Alignment Script for Biowulf</span>
+<span class="s"># Usage with swarm: see bismark_align.swarm</span>
+<span class="s"># Expects files: SAMPLENAME_R1_001.fastq.gz and SAMPLENAME_R2_001.fastq.gz</span>
+
+<span class="s">set -e  # Exit on error</span>
+<span class="s">set -u  # Exit on undefined variable</span>
+
+<span class="s"># Load modules</span>
+<span class="s">module load bismark</span>
+<span class="s">module load bowtie2</span>
+<span class="s">module load samtools</span>
+
+<span class="s"># Define paths</span>
+<span class="s">GENOME_DIR="/data/gallegosda/genomes/GRCm38"</span>
+<span class="s">FASTQ_DIR="/data/gallegosda/GEO/WGBS/260220_WGBS_DG/raw_data/fastq260220"</span>
+<span class="s">OUTPUT_DIR="/data/gallegosda/GEO/WGBS/260220_WGBS_DG/raw_data/fastq260220/bismark/WGBS_Feb2026/bismark_output_TEST"</span>
+<span class="s">SAMPLE=$1</span>
+
+<span class="s"># Create output directory if it doesn't exist</span>
+<span class="s">mkdir -p ${OUTPUT_DIR}</span>
+
+<span class="s"># Use lscratch for temp files</span>
+<span class="s">export TMPDIR=/lscratch/$SLURM_JOB_ID</span>
+<span class="s">cd $TMPDIR</span>
+
+<span class="s">echo "Starting Bismark alignment for sample: ${SAMPLE}"</span>
+<span class="s">echo "Job ID: $SLURM_JOB_ID"</span>
+<span class="s">echo "Allocated CPUs: $SLURM_CPUS_PER_TASK"</span>
+<span class="s">echo "Allocated Memory: ${SLURM_MEM_PER_NODE}M"</span>
+
+<span class="s"># Run Bismark with proper parallelization</span>
+<span class="s">bismark --bowtie2 \</span>
+<span class="s">  --genome ${GENOME_DIR} \</span>
+<span class="s">  -1 ${FASTQ_DIR}/${SAMPLE}_R1_001.fastq.gz \</span>
+<span class="s">  -2 ${FASTQ_DIR}/${SAMPLE}_R2_001.fastq.gz \</span>
+<span class="s">  --parallel 4 \</span>
+<span class="s">  --output_dir ${OUTPUT_DIR} \</span>
+<span class="s">  --temp_dir $TMPDIR \</span>
+<span class="s">  --nucleotide_coverage \</span>
+
+<span class="s">echo "Alignment complete for ${SAMPLE}"</span>
+<span class="s">EOF</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=597d32fb-be0f-4574-b469-7b96354ff3d1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>cat<span class="w"> </span>DG3_R1_Input_BSconv_S3_TESTSH.sh
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>#!/bin/bash
+# Bismark Alignment Script for Biowulf
+# Usage with swarm: see bismark_align.swarm
+# Expects files: SAMPLENAME_R1_001.fastq.gz and SAMPLENAME_R2_001.fastq.gz
+
+set -e  # Exit on error
+set -u  # Exit on undefined variable
+
+# Load modules
+module load bismark
+module load bowtie2
+module load samtools
+
+# Define paths
+GENOME_DIR="/data/gallegosda/genomes/GRCm38"
+FASTQ_DIR="/data/gallegosda/GEO/WGBS/260220_WGBS_DG/raw_data/fastq260220"
+OUTPUT_DIR="/data/gallegosda/GEO/WGBS/260220_WGBS_DG/raw_data/fastq260220/bismark/WGBS_Feb2026/bismark_output_TEST"
+SAMPLE=$1
+
+# Create output directory if it doesn't exist
+mkdir -p ${OUTPUT_DIR}
+
+# Use lscratch for temp files
+export TMPDIR=/lscratch/$SLURM_JOB_ID
+cd $TMPDIR
+
+echo "Starting Bismark alignment for sample: ${SAMPLE}"
+echo "Job ID: $SLURM_JOB_ID"
+echo "Allocated CPUs: $SLURM_CPUS_PER_TASK"
+echo "Allocated Memory: ${SLURM_MEM_PER_NODE}M"
+
+# Run Bismark with proper parallelization
+bismark --bowtie2 \
+  --genome ${GENOME_DIR} \
+  -1 ${FASTQ_DIR}/${SAMPLE}_R1_001.fastq.gz \
+  -2 ${FASTQ_DIR}/${SAMPLE}_R2_001.fastq.gz \
+  --parallel 4 \
+  --output_dir ${OUTPUT_DIR} \
+  --temp_dir $TMPDIR \
+  --nucleotide_coverage \
+
+echo "Alignment complete for ${SAMPLE}"
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a8c80736-27e7-4ff5-9238-cacb500ceeeb">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>cat<span class="w"> </span>DG3_R1_Input_BSconv_S3_TESTSWARM.swarm
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>bash DG3_R1_Input_BSconv_S3_TESTSH.sh DG3_R1_Input_BSconv_S3
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1cd5ef9d-b771-492e-98eb-fa107b883009">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>swarm<span class="w"> </span>-f<span class="w"> </span>DG3_R1_Input_BSconv_S3_TESTSWARM.swarm<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-g<span class="w"> </span><span class="m">80</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-t<span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--time<span class="o">=</span><span class="m">48</span>:00:00<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--gres<span class="o">=</span>lscratch:200<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--logdir<span class="w"> </span>swarm_logs
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>12419171
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a3bb8889-a1e9-42a9-aeb7-4d3e8b1d3062">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Run-other-swarm-file-for-the-rest-of-the-samples">Run other swarm file for the rest of the samples<a class="anchor-link" href="#Run-other-swarm-file-for-the-rest-of-the-samples">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ff6074c4-d1be-4359-969d-79030617f7f2">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>cat<span class="w"> </span>&gt;<span class="w"> </span>bismark_clean_swarm_script.sh<span class="w"> </span><span class="s">&lt;&lt; 'EOF'</span>
+<span class="s">#!/bin/bash</span>
+<span class="s"># Bismark Alignment Script for Biowulf</span>
+<span class="s"># Usage with swarm: see bismark_align.swarm</span>
+<span class="s"># Expects files: SAMPLENAME_R1_001.fastq.gz and SAMPLENAME_R2_001.fastq.gz</span>
+
+<span class="s">set -e  # Exit on error</span>
+<span class="s">set -u  # Exit on undefined variable</span>
+
+<span class="s"># Load modules</span>
+<span class="s">module load bismark</span>
+<span class="s">module load bowtie2</span>
+<span class="s">module load samtools</span>
+
+<span class="s"># Define paths</span>
+<span class="s">GENOME_DIR="/data/gallegosda/genomes/GRCm38"</span>
+<span class="s">FASTQ_DIR="/data/gallegosda/GEO/WGBS/260220_WGBS_DG/raw_data/fastq260220"</span>
+<span class="s">OUTPUT_DIR="/data/gallegosda/GEO/WGBS/260220_WGBS_DG/raw_data/fastq260220/bismark/WGBS_Feb2026/bismark_output_TEST"</span>
+<span class="s">SAMPLE=$1</span>
+
+<span class="s"># Create output directory if it doesn't exist</span>
+<span class="s">mkdir -p ${OUTPUT_DIR}</span>
+
+<span class="s"># Use lscratch for temp files</span>
+<span class="s">export TMPDIR=/lscratch/$SLURM_JOB_ID</span>
+<span class="s">cd $TMPDIR</span>
+
+<span class="s">echo "Starting Bismark alignment for sample: ${SAMPLE}"</span>
+<span class="s">echo "Job ID: $SLURM_JOB_ID"</span>
+<span class="s">echo "Allocated CPUs: $SLURM_CPUS_PER_TASK"</span>
+<span class="s">echo "Allocated Memory: ${SLURM_MEM_PER_NODE}M"</span>
+
+<span class="s"># Run Bismark with proper parallelization</span>
+<span class="s">bismark --bowtie2 \</span>
+<span class="s">  --genome ${GENOME_DIR} \</span>
+<span class="s">  -1 ${FASTQ_DIR}/${SAMPLE}_R1_001.fastq.gz \</span>
+<span class="s">  -2 ${FASTQ_DIR}/${SAMPLE}_R2_001.fastq.gz \</span>
+<span class="s">  --parallel 4 \</span>
+<span class="s">  --output_dir ${OUTPUT_DIR} \</span>
+<span class="s">  --temp_dir $TMPDIR \</span>
+<span class="s">  --nucleotide_coverage \</span>
+
+<span class="s">echo "Alignment complete for ${SAMPLE}"</span>
+<span class="s">EOF</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f327b3d2-c247-4bf0-b299-41796ed97ef7">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>cat<span class="w"> </span>bismark_clean_swarm_script.sh
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>#!/bin/bash
+# Bismark Alignment Script for Biowulf
+# Usage with swarm: see bismark_align.swarm
+# Expects files: SAMPLENAME_R1_001.fastq.gz and SAMPLENAME_R2_001.fastq.gz
+
+set -e  # Exit on error
+set -u  # Exit on undefined variable
+
+# Load modules
+module load bismark
+module load bowtie2
+module load samtools
+
+# Define paths
+GENOME_DIR="/data/gallegosda/genomes/GRCm38"
+FASTQ_DIR="/data/gallegosda/GEO/WGBS/260220_WGBS_DG/raw_data/fastq260220"
+OUTPUT_DIR="/data/gallegosda/GEO/WGBS/260220_WGBS_DG/raw_data/fastq260220/bismark/WGBS_Feb2026/bismark_output_TEST"
+SAMPLE=$1
+
+# Create output directory if it doesn't exist
+mkdir -p ${OUTPUT_DIR}
+
+# Use lscratch for temp files
+export TMPDIR=/lscratch/$SLURM_JOB_ID
+cd $TMPDIR
+
+echo "Starting Bismark alignment for sample: ${SAMPLE}"
+echo "Job ID: $SLURM_JOB_ID"
+echo "Allocated CPUs: $SLURM_CPUS_PER_TASK"
+echo "Allocated Memory: ${SLURM_MEM_PER_NODE}M"
+
+# Run Bismark with proper parallelization
+bismark --bowtie2 \
+  --genome ${GENOME_DIR} \
+  -1 ${FASTQ_DIR}/${SAMPLE}_R1_001.fastq.gz \
+  -2 ${FASTQ_DIR}/${SAMPLE}_R2_001.fastq.gz \
+  --parallel 4 \
+  --output_dir ${OUTPUT_DIR} \
+  --temp_dir $TMPDIR \
+  --nucleotide_coverage \
+
+echo "Alignment complete for ${SAMPLE}"
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=95fb1bfb-6c2d-44c1-9675-12edb4ce893e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>cat<span class="w"> </span>&gt;<span class="w"> </span>bismark_clean_swarm.swarm<span class="w"> </span><span class="s">&lt;&lt; 'EOF'</span>
+<span class="s">bash bismark_clean_swarm_script.sh DG1_R1_777_ChIP_BSconv_S1</span>
+<span class="s">bash bismark_clean_swarm_script.sh DG2_MEF_777_ChIP_BSconv_S2</span>
+<span class="s">bash bismark_clean_swarm_script.sh DG4_MEF_Input_BSconv_S4</span>
+<span class="s">bash bismark_clean_swarm_script.sh DG5_E8_3_aa_BSconv_S5</span>
+<span class="s">bash bismark_clean_swarm_script.sh DG6_E8_5_WT_BSconv_S6</span>
+<span class="s">bash bismark_clean_swarm_script.sh DG7_E8_7_WT_BSconv_S7</span>
+<span class="s">bash bismark_clean_swarm_script.sh DG8_E8_8_aa_BSconv_S8</span>
+<span class="s">EOF</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=15bea201-5918-4a7d-99e7-d1f43e2063bf">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-bash"><pre><span></span>swarm<span class="w"> </span>-f<span class="w"> </span>bismark_clean_swarm.swarm<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-g<span class="w"> </span><span class="m">80</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-t<span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--time<span class="o">=</span><span class="m">48</span>:00:00<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--gres<span class="o">=</span>lscratch:200<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--logdir<span class="w"> </span>swarm_logs
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>12421733
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=96b5a46d-f983-4ad6-af96-6481cc5d6f60">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
